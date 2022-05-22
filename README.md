@@ -38,6 +38,8 @@
 3-2. git config --global user.email "sahatk@naver.com"
 4. git config --list
 
+5. git clone https://github.com/sahatk/front_220220_main.git
+
 -----------------------------------------------------------------------------------------------------------------------------
 github에 처음 코드 업로드하기
 
