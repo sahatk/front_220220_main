@@ -1,0 +1,11 @@
+@charset "UTF-8";
+/* b_01_layout.css */
+@import url("../../cssTemp/main/mainWrap.css");
+@import url("../../cssTemp/common/headBox.css");
+@import url("../../cssTemp/main/slideBox.css");
+@import url("../../cssTemp/main/newBox.css");
+@import url("../../cssTemp/main/subBox.css");
+@import url("../../cssTemp/main/bestBox.css");
+@import url("../../cssTemp/main/gallerBox.css");
+@import url("../../cssTemp/main/sponsorBox.css");
+@import url("../../cssTemp/common/footBox.css");

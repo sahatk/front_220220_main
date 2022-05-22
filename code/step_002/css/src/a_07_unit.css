@@ -1,0 +1,73 @@
+@charset "utf-8";
+/* a_07_unit.css */
+:root { font-size:16px; }
+
+/* reset.css */
+
+/* 
+*{
+  margin: 0; padding: 0; border: 0;
+font-size:16px;} 
+*/
+
+#wrap {
+  width: 900px; height: auto;
+  margin:auto;
+  padding-bottom: 500px;
+}
+
+.part {
+  width: 600px; height: 400px;
+  margin-bottom:30px;
+  background-color: rgba(81,81,81,0.2);}
+  .outer {
+    width:550px; height:350px;
+    border:1px solid #333; 
+  }
+  .inner {
+    width: 500px; height:200px;
+    margin:auto;
+    background-color: rgba(255,200,0,0.5);
+  }
+  .inner > span {
+    display: block;
+    width: 400px; height: 100px;
+    background-color: #0cf;
+  }
+
+  /* -------------------------------------- */
+  h2 {font-size: inherit;}
+  
+  /* px -------------------------------------- */
+  .unit_px {width:600px; font-size:16px; }
+  .unit_px .outer {width: 550px; font-size:32px; }
+  .unit_px .inner {width: 500px; font-size:16px; }
+  .unit_px span {width: 400px; font-size:32px; }
+
+  /* pt-------------------------------------- */
+  /* web환경에서 pt단위는 실제로 사용X */
+.unit_pt { width:450pt; font-size: 12pt;}
+.unit_pt .outer{ width:412.5pt; font-size: 24pt;}
+.unit_pt .inner{ width:375pt; font-size:12pt;}
+.unit_pt span{ width:300pt; font-size: 24pt;}
+
+/* % ------------------------------------------ */
+/* %계산방법 : 사용크기 / 기준크기 * 100  */
+.unit_per {width:600px; font-size:100%;}
+.unit_per .outer{width:91.666667%; 
+  font-size: 200%;}
+.unit_per .inner{width:90.909091%; font-size:50%;}
+.unit_per span{width:80%; font-size:200%;}
+
+/* em ------------------------------------ */
+.unit_em {width: 37.5em; font-size:1em;}
+.unit_em .outer{width: 17.1875em; font-size:2em;}
+.unit_em .inner{width: 31.25em; font-size: 0.5em;}
+.unit_em span{width: 12.5em; font-size: 2em;}
+
+/* rem ------------------------------------ */
+.unit_rem {width: 660px; font-size:16px; width: 37.5rem; font-size:1rem;}
+.unit_rem .outer{ width: 34.375rem; font-size: 2rem;}
+.unit_rem .inner{ width: 31.25rem; font-size:1rem;}
+.unit_rem span{width: 25rem; font-size: 2rem;}
+
