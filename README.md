@@ -38,6 +38,7 @@
 3-2. git config --global user.email "sahatk@naver.com"
 4. git config --list
 
+// git 불러오기
 5. git clone https://github.com/sahatk/front_220220_main.git
 
 -----------------------------------------------------------------------------------------------------------------------------
