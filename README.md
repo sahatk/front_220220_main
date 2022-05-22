@@ -20,3 +20,46 @@
 ## 과제 : 
 > git생성부터, clone, (add, commit, push) * 10, repository자체 삭제 - 5회이상 실행해보기
 
+
+
+## 내가 정리한 사용법 :
+처음 github 사용 할 때
+1. git 설치
+2. 설치 완료 후 git bash 열기
+3. git bash에서 환경설정 하기
+3-1. git config --global user.name "sangjin Park"
+3-2. git config --global user.email "sahatk@naver.com"
+4. git config --list
+
+-----------------------------------------------------------------------------------------------------------------------------
+github에 처음 코드 업로드하기
+
+1. 초기화
+git init
+
+2. 추가할 파일 더하기
+git add .
+
+3.상태 확인(선택사항)
+git status
+
+4. 히스토리 만들기 
+git commit -m "first commit"
+
+5. Github repository랑 내 로컬 프로젝트랑 연결
+git remote add origin https://github.com/sahatk/front_220220_main.git
+
+6. 잘 연결됬는데 확인(선택사항)
+git remote -v
+
+7. Github홈페이지에 올리기
+git push origin master
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+추가할 떄
+1. git add .
+2. git status
+3. git commit -m "first commit"
+4. git push origin master
+
