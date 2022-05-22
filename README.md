@@ -47,7 +47,7 @@ github에 처음 코드 업로드하기
 git init
 
 2. 추가할 파일 더하기
-git add .
+git add . (add 다음 띄어쓰기하고 . 주의!!)
 
 3.상태 확인(선택사항)
 git status
