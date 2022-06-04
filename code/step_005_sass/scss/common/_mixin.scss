@@ -1,0 +1,55 @@
+ // mixin.scss
+ @import "./variable";
+ 
+ //가상으로 만든 선택자
+ %full {width: $full; height: $full;}
+
+ // @mixin으로 full()이라는 이름 함수 만들기
+ @mixin full(){
+     width: $full; height: $full;
+ }
+ 
+// 함수 full() 불러오기 : @include full();
+a.full {
+    display: block;
+    width: 100%; height: 100%;
+    background-image: url($url + $file);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+
+    cursor: pointer;
+    border: 0;
+}
+
+a > span {
+    position: absolute; z-index: -1;
+    clip:rect(0,0,0,0);
+    width: 1px; height: 1px; overflow: hidden;
+}
+
+$url : './path/';
+@mixin btnImage($f, $r:no-repeat, $p:50% 50%, $s:cover) {
+    display: block;
+    width: 100%; height: 100%;
+    background-image: url($url + $f);
+    background-repeat: $r;
+    background-position: $p;
+    background-size: $s;
+
+    cursor: pointer;
+    border: 0;
+
+    &  > span {
+        position: absolute; z-index: -1;
+        clip:rect(0,0,0,0);
+        width: 1px; height: 1px; overflow: hidden;
+    }
+    &:hover, &:focus {@content;}
+}
+
+li a {
+    @include btnImage($f:'a.png', $s:contain){
+    border:3px solid $primary2;
+    };
+}
