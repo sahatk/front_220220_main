@@ -105,12 +105,4 @@ fetch(JSONURL)
 
 
 
-  })
-<<<<<<< HEAD
-  .catch(console.log);
-
-
-  //https://prepros.io/downloads
-=======
-  .catch(console.log);
->>>>>>> 2b7955d5f66063246eaef3e458810e768e4733b6
+  });
