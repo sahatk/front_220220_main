@@ -1,6 +1,7 @@
+/* content.scss */
 html, body {
-  width: 50%;
-  height: 50%;
+  width: 100%;
+  height: 100%;
 }
 
 a.full {
@@ -24,30 +25,9 @@ a > span {
   overflow: hidden;
 }
 
-li a {
-  display: block;
+.box {
   width: 100%;
   height: 100%;
-  background-image: url();
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: contain;
-  cursor: pointer;
-  border: 0;
-}
-li a > span {
-  position: absolute;
-  z-index: -1;
-  clip: rect(0, 0, 0, 0);
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-
-/* content.scss */
-.box {
-  width: 50%;
-  height: 50%;
 }
 
 #wrap {
@@ -74,6 +54,7 @@ h1 {
   background-position: 50% 50%;
   background-size: contain;
   font-weight: 700;
+  font-style: normal;
   font-size: 20px;
   font-family: "arial", "myriad pro", sans-serif;
   line-height: 30px;
@@ -94,7 +75,7 @@ h1 {
 }
 
 .news li:nth-child(3) .img {
-  background-image: url("../img/newsData/three.png");
+  background-image: url("../img/newsData/outer.jpg");
 }
 
 .news li:nth-child(4) .img {
@@ -121,27 +102,21 @@ h1 {
   background-image: url("../img/newsData/esspresso.png");
 }
 
-/* ----------------------------------------------- */
+/* ------------------------------------- */
 /*
-#contentBox {width: 100%; height: 400px; margin: auto;}
-#contentBox h2 {position: absolute; width: 0; height: 0; overflow: hidden;}
-#contentBox ul {
-    width: 100%; height: 300px; padding-top: 10px;
-    margin-bottom: 10px; border-bottom: 1px solid #333;
-}
-
-#contentBox ul li {
-    float: left; width: 30px; height: 40px;
-    margin: 20px; padding:10px; border : 1px solid #777;
-}
-
-#contentBox ul li a {
-    display: block; width: 100%; height: 100%;
+  #contentBox { width: 100%; height: 400px; margin: auto;}
+  #contentBox h2 { position: absolute; width: 0; height: 0;  overflow: hidden;}
+  #contentBox ul {
+    width: 100%; height: 300px; 
+    padding-top: 10px; margin-bottom: 10px; border-bottom: 1px solid #333; }
+  #contentBox ul li {
+    float:left; width:30px; height: 40px; 
+    margin:20px; padding:10px; border:1px solid #777; }
+  #contentBox ul li a{ display: block; width: 100%; height: 100%; 
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
-    background-image: url('../img/news/a.png');
-} 
+    background-image: url('../img/news/a.png'); }
 */
 #contentBox {
   width: 100%;
@@ -186,4 +161,8 @@ h1 {
 }
 #contentBox li a:visited {
   color: #aaf;
+}
+
+#wrap {
+  background-color: #add;
 }

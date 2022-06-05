@@ -1,148 +1,133 @@
 @charset "UTF-8";
-// @import "../common/variable";
-@import "../common/mixin";
 /* content.scss */
-// 한줄수석은 변환 x
+// @import "../common/variable";
+@use '../common/variable' as *;
+@import "../common/_mixin";
+// 한줄주석은 변환 X
 
 
-html,body {@extend %full;}
-
-// full() 불러오기 : @include full();
-.box {@include full(); }
+html, body { @extend %full; } 
+.box { @include full(); }
 
 #wrap {
-    width:900px; height:auto; min-height: 500px;
-    margin:auto;
-    color:mix($white, $black);
-    background-color: darken($white,15%);
+  width:900px; height:auto; min-height: 500px;
+  margin:auto;
+  color:mix($white , $black);
+  background-color: darken($white, 15%);
 }
 
 #header {
-    width: 100%; height: 300px;
-    color: rgba($black, 0.4);
-    background-color: lighten($black, 70%);
+  width: 100%; height: 300px; 
+  color: rgba($black, 0.4);
+  background-color: lighten($black, 70%);
 }
 
 h1 {
-    width: 30px; height: 30px;
-    // background-image: url('../img/common/logo.png');
-    // background-repeat: no-repeat;
-    // background-position: 50% 50%;
-    // background-size: contain;
-    $url : '../img/common/';
-    background: {
-        image: url($url + 'logo1.png');
-        repeat: no-repeat;
-        position: 50% 50%;
-        size: contain;
-    }
+  width: 30px; height: 30px; 
+  // background-image:url('../img/common/logo.png');
+  // background-repeat: no-repeat;
+  // background-position: 50% 50%;
+  // background-size: contain;
+  $url : '../img/common/';
+  background: {
+    image:url($url + 'logo1.png');
+    repeat: no-repeat;
+    position: 50% 50%;
+    size: contain;
+  }
 
-    // font:weight normal 16px/10px arial, myriad;
-    font: {
-        weight : 700;
-        // style : normal;
-        size : 20px;
-        family : 'arial', 'myriad pro', sans-serif;
-    }
-    line-height: 30px;
-
+  // 22.06.04 수정
+  //  font:weight normal 16px/10px arial, myriad; 
+  font: {
+    weight: 700;
+    style:normal; 
+    size:20px;
+    family:'arial', 'myriad pro', sans-serif;
+  }
+  line-height:30px;
+  // 22.06.04 수정끝
+ 
 } // h1
 
 
 .news li .img {
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
 }
 
 $url : '../img/newsData/';
-$news : ('one.jpg', 'two.png', 'three.png', 'a.png', 'b.png'); // nth(변수명, 순번) , length(변수명)
-// .news li:nth-child(1) .img {background-image: url($url + nth($news,1) );}
-// .news li:nth-child(2) .img {background-image: url($url + nth($news,2) );}
-// .news li:nth-child(3) .img {background-image: url($url + nth($news,3) );}
+$news : ('one.jpg', 'two.png', 'outer.jpg', 'a.png', 'b.png');
+// nth(변수명, 순번)  , length(변수명)
 
-// #{$i} : 자바스크립트의 ${변수명, 함수명} 즉, 보관법과 같다.
+// .news li:nth-child(1) .img { background-image: url($url + nth($news, 1)   );}
+// .news li:nth-child(2) .img { background-image: url($url + nth($news, 2)   );}
+// .news li:nth-child(3) .img { background-image: url($url + nth($news, 3)   );}
+
 @for $i from 1 through length($news) {
-    .news li:nth-child(#{$i}) .img {background-image: url($url + nth($news, $i) );}
+  .news li:nth-child(#{$i}) .img { 
+    background-image: url($url + nth($news, $i));
+  }
 }
 
 $co : 'coffee';
 $coffee : ('americano','cafelatte','moccagold','esspresso');
-@mixin coffee($var, $name) {
-    background-image: url($url + nth($var, $name) + '.png');
+@mixin coffee($var, $name){
+  background-image:url($url + nth($var, $name) + '.png');
 }
 
-// .coffee_americano { background-image: url($url + nth($coffee, 1)+ '.png'); }
-// .coffee_cafelette { background-image: url($url + nth($coffee, 2)+ '.png'); }
-// .coffee_moccagold { background-image: url($url + nth($coffee, 3)+ '.png'); }
-// .coffee_esspresso { background-image: url($url + nth($coffee, 4)+ '.png'); }
+// .coffee_americano { background-image:url($url + nth($coffee, 1) + '.png');}
+// .coffee_cafelatte { background-image:url($url + nth($coffee, 2) + '.png');}
+// .coffee_moccagold { background-image:url($url + nth($coffee, 3) + '.png');}
+// .coffee_esspresso { background-image:url($url + nth($coffee, 4) + '.png');}
 @for $i from 1 through length($coffee) {
-    .#{$co}_#{nth($coffee, $i)} { @include coffee($coffee, $i);}
+  .#{$co}_#{nth($coffee, $i)} { @include coffee($coffee, $i); }
 }
-
-
-// @media screen and (min-width:1024px) {
-//     @import './page/tab';
-// }
-
-// @media screen and (max-width:1023px) {
-//     @import './page/mobile';
-// }
-
-
-//scss로 작업한것은 css변환가능
-// css로 작업한것은 scss변환불가능
-// css로 수정을 했다면 이 후 작업은 css에서 해야한다.
-
-/* ----------------------------------------------- */
+/* ------------------------------------- */
 /*
-#contentBox {width: 100%; height: 400px; margin: auto;}
-#contentBox h2 {position: absolute; width: 0; height: 0; overflow: hidden;}
-#contentBox ul {
-    width: 100%; height: 300px; padding-top: 10px;
-    margin-bottom: 10px; border-bottom: 1px solid #333;
-}
-
-#contentBox ul li {
-    float: left; width: 30px; height: 40px;
-    margin: 20px; padding:10px; border : 1px solid #777;
-}
-
-#contentBox ul li a {
-    display: block; width: 100%; height: 100%;
+  #contentBox { width: 100%; height: 400px; margin: auto;}
+  #contentBox h2 { position: absolute; width: 0; height: 0;  overflow: hidden;}
+  #contentBox ul {
+    width: 100%; height: 300px; 
+    padding-top: 10px; margin-bottom: 10px; border-bottom: 1px solid #333; }
+  #contentBox ul li {
+    float:left; width:30px; height: 40px; 
+    margin:20px; padding:10px; border:1px solid #777; }
+  #contentBox ul li a{ display: block; width: 100%; height: 100%; 
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
-    background-image: url('../img/news/a.png');
-} 
+    background-image: url('../img/news/a.png'); }
 */
 
-// nesting 기법 (가급적이면 선택자 3개까지만 제한)
-#contentBox {width: 100%; height: 400px; margin: auto;
+#contentBox { width: 100%; height: 400px; margin: auto;
 
-    & h2 {position: absolute; width: 0; height: 0; overflow: hidden;}
-    & ul {
-        width: 100%; height: 300px; padding-top: 10px;
-        margin-bottom: 10px; border-bottom: 1px solid #333;
-    } // ul
-    & li {
-        float: left; width: 30px; height: 40px;
-        margin: 20px; padding:10px; border : 1px solid #777;
-    } //li
-    & li a {
-        display: block; width: 100%; height: 100%;
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
-        background-size: cover;
-        background-image: url('../img/news/a.png');
-    } // li a
-    & li a {
-        &:hover {color:#fff}
-        &:focus {color:#af0}
-        &:visited{color:#aaf}
-    } // li a :hover .etc
-} //#contentBox
+  & h2 { position: absolute; width: 0; height: 0;  overflow: hidden;}
+  & ul { width: 100%; height: 300px; 
+    padding-top: 10px; margin-bottom: 10px; border-bottom: 1px solid #333;
+  } // ul
+
+  & li {
+    float:left; width:30px; height: 40px; 
+    margin:20px; padding:10px; border:1px solid #777;
+  
+  }// li
+  & li a{ 
+    display: block; width: 100%; height: 100%; 
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-image: url('../img/news/a.png'); }
+
+  & li a {
+    &:hover { color:#fff; }
+    &:focus { color:#af0; }
+    &:visited {color:#aaf;}
+  }
+
+} // #contentBox
 
 
-
-
+#wrap{
+  background-color: #add;
+}
