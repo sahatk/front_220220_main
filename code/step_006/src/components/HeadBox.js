@@ -3,7 +3,7 @@
 import './PageTitle';
 import './HeadBox.css';
 import PageTitle from './PageTitle';
-import Navigation from './Navigation';
+import Navigation from './template/Navigation';
 
 function HeadBox(){
     return (

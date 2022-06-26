@@ -1,8 +1,15 @@
-import './ContentBox.css'
+import MainSlide from './template/MainSlide';
+import Curriculum from './template/Curriculum';
+
+import './ContentBox.css';
+
 
 function ContentBox(){
     return (
-        <main id="ContentBox">text</main>
+        <main id="ContentBox">
+            <MainSlide/>
+            <Curriculum />
+        </main>
     );
 }
 
