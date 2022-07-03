@@ -1,0 +1,16 @@
+1. 푸터 아이콘 크기 줄이고
+
+2.푸터 가운데 정렬
+
+3. global page lan
+
+4로고 div태그안에 <span class="blind">spc</span>
+
+5. section_box1 안에 <h1 class="blind></h1>
+
+6.a태그 button 같이 쓰기 않기
+
+
+
+
+
