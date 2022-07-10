@@ -1,0 +1,15 @@
+component : 틀
+props : 내용전달
+useState : 변수 변경값 처리
+useEffect : 변화 및 비동기 처리를 원할하게 선택한 변수만 동작하도록 처리하는 보조역할
+
+-- 예제 정리, 샘플 페이지
+-- 페이지 분리, 슬라이드 광고
+
+function fn(){
+ window.num = 0;
+ let num = window.num;
+ click => window.num += 1;
+
+ fn();
+}
