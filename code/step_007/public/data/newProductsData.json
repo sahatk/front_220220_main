@@ -5,7 +5,8 @@
     "alt":"설명",
     "link":"#",
     "title":"title11",
-    "content":"lorem text134"
+
+    "content":"lorem text1"
   },
   {
     "id":2,
@@ -13,7 +14,7 @@
     "alt":"설명",
     "link":"#",
     "title":"title21",
-    "content":"lorem text23434"
+    "content":"lorem text2"
   },
   {
     "id":3,
@@ -21,6 +22,6 @@
     "alt":"설명",
     "link":"#",
     "title":"title31",
-    "content":"lorem text3234"
+    "content":"lorem text3"
   }
 ]
