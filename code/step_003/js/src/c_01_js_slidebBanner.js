@@ -47,7 +47,7 @@
             slideViewAreaList.style.left = '100%';
             setTimeout(()=>{
                 slideViewAreaList.classList.add(ANINONE); //애니메이션 클래스 transition_none 적용
-                slideViewAreaList.style.left = num * -100 + '%';
+                slideViewAreaList.style.left = num * -100 + '%'; 
 
                 setTimeout(()=>{
                     slideViewAreaList.classList.remove(ANINONE);
