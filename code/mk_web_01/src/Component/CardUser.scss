@@ -1,0 +1,50 @@
+// cardUser.scss
+
+@use '../common/variable' as *;
+@use '../common/mixin';
+
+
+.card_user{
+    width: 15.625rem; height: auto;
+    box-sizing: border-box;
+    padding: 0.2rem; padding-bottom: 1rem;
+    border: 0.0625rem solid #ccc;
+    background-color: #fff;
+
+    .user_image {
+        overflow: hidden;
+        position: relative;
+        $size : 230px;
+        width: $size; height: $size;
+        background-color: #ccc;
+        border-radius: $size;
+        margin: auto;
+        margin-bottom: 1.5rem;
+        background-position: 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    & img {
+        position:absolute;
+        width:auto; height: auto;
+        min-width: 100%; min-height: 100%;
+    }
+
+    p {
+        width: 100%; height: auto;
+        text-align: center;
+        text-transform: capitalize;
+    }
+
+    .user_name {
+        margin-bottom: 0.3rem;
+        font-weight: 900; font-size: 1.1rem;
+    }
+    
+    .user_position{
+        color:$color-deep_gray;
+        font-weight: 700;
+    }
+}
+
