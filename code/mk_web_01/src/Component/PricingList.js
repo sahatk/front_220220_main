@@ -17,9 +17,8 @@ function PricingList(props) {
           </dl>
           <ul>
             {listData.map((data, index)=> 
-              <li>
+              <li key={index}>
                 <FontAwesomeIcon 
-                    key={index}
                     icon={faCheck} 
                     style={{color:'#6C73b5', marginRight:'1rem'}} />
                   {data}
