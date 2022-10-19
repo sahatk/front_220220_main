@@ -74,9 +74,9 @@ git push origin main
 4. git push origin main
 
 
-!!!!주의!!!!
-★★★ main 인지 master 인지 경로 확인하고 업로드하기★★★
-git branch -M main  ---> main으로 경로 바꾸기
+!!!!주의!!!! <br />
+★★★ main 인지 master 인지 경로 확인하고 업로드하기★★★ <br />
+git branch -M main  ---> main으로 경로 바꾸기 <br />
 git branch -M master ---> master로 경로 바꾸기
 
 
