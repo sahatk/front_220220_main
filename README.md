@@ -63,7 +63,7 @@ git remote add origin https://github.com/sahatk/front_220220_main.git
 git remote -v
 
 7. Github홈페이지에 올리기
-git push origin master
+git push origin main
 
 -----------------------------------------------------------------------------------------------------------------------------
 
@@ -71,5 +71,5 @@ git push origin master
 1. git add .
 2. git status
 3. git commit -m "first commit"
-4. git push origin master
+4. git push origin main
 
